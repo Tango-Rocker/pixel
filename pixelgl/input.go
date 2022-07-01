@@ -4,8 +4,8 @@ import (
 	"time"
 
 	"github.com/faiface/mainthread"
-	"github.com/faiface/pixel"
 	"github.com/go-gl/glfw/v3.3/glfw"
+	"github.com/tango-rocker/pixel"
 )
 
 // Pressed returns whether the Button is currently pressed down.
@@ -410,7 +410,7 @@ func (w *Window) initInput() {
 			}
 
 			for _, cbfun := range w.callbacks.buttonCallbacks {
-				go cbfun(Button(button), ButtonAction(action))
+				cbfun(Button(button), ButtonAction(action))
 			}
 		})
 
@@ -430,7 +430,7 @@ func (w *Window) initInput() {
 			}
 
 			for _, cbfun := range w.callbacks.buttonCallbacks {
-				go cbfun(Button(key), ButtonAction(action))
+				cbfun(Button(key), ButtonAction(action))
 			}
 		})
 
@@ -438,7 +438,7 @@ func (w *Window) initInput() {
 			w.cursorInsideWindow = entered
 
 			for _, cbfun := range w.callbacks.cursorEnterCallbacks {
-				go cbfun()
+				cbfun()
 			}
 		})
 
@@ -449,7 +449,7 @@ func (w *Window) initInput() {
 			)
 
 			for _, cbfun := range w.callbacks.cursorPosCallbacks {
-				go cbfun(x, y)
+				cbfun(x, y)
 			}
 		})
 
@@ -458,14 +458,14 @@ func (w *Window) initInput() {
 			w.tempInp.scroll.Y += yoff
 
 			for _, cbfun := range w.callbacks.scrollCallbacks {
-				go cbfun(xoff, yoff)
+				cbfun(xoff, yoff)
 			}
 		})
 
 		w.window.SetCharCallback(func(_ *glfw.Window, r rune) {
 			w.tempInp.typed += string(r)
 			for _, cbfun := range w.callbacks.charCallbacks {
-				go cbfun(r)
+				cbfun(r)
 			}
 		})
 	})

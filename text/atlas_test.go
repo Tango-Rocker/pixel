@@ -3,7 +3,7 @@ package text_test
 import (
 	"testing"
 
-	"github.com/faiface/pixel/text"
+	"github.com/tango-rocker/pixel/text"
 	"golang.org/x/image/font/inconsolata"
 )
 

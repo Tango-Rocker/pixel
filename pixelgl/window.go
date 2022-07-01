@@ -2,13 +2,13 @@ package pixelgl
 
 import (
 	"fmt"
+	"github.com/tango-rocker/pixel"
 	"image"
 	"image/color"
 	"runtime"
 
 	"github.com/faiface/glhf"
 	"github.com/faiface/mainthread"
-	"github.com/faiface/pixel"
 	"github.com/go-gl/gl/v3.3-core/gl"
 	"github.com/go-gl/glfw/v3.3/glfw"
 	"github.com/pkg/errors"

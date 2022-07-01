@@ -6,7 +6,7 @@ import (
 	"sort"
 	"unicode"
 
-	"github.com/faiface/pixel"
+	"github.com/tango-rocker/pixel"
 	"golang.org/x/image/font"
 	"golang.org/x/image/math/fixed"
 )

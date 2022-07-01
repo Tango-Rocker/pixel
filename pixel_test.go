@@ -8,8 +8,8 @@ import (
 
 	_ "image/png"
 
-	"github.com/faiface/pixel"
-	"github.com/faiface/pixel/pixelgl"
+	"github.com/tango-rocker/pixel"
+	"github.com/tango-rocker/pixel/pixelgl"
 )
 
 // onePixelImage is the byte representation of a 1x1 solid white png file

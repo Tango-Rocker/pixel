@@ -2,13 +2,13 @@ package pixelgl
 
 import (
 	"fmt"
+	"github.com/tango-rocker/pixel"
 	"image"
 	"image/color"
 	"runtime"
 
 	"github.com/faiface/glhf"
 	"github.com/faiface/mainthread"
-	"github.com/faiface/pixel"
 	"github.com/go-gl/gl/v3.3-core/gl"
 	"github.com/go-gl/glfw/v3.3/glfw"
 	"github.com/pkg/errors"
@@ -95,6 +95,14 @@ type Window struct {
 	// need to save these to correctly restore a fullscreen window
 	restore struct {
 		xpos, ypos, width, height int
+	}
+
+	callbacks struct {
+		buttonCallbacks      []ButtonCallback
+		cursorEnterCallbacks []CursorEnterCallback
+		cursorPosCallbacks   []CursorPosCallback
+		scrollCallbacks      []ScrollCallback
+		charCallbacks        []CharCallback
 	}
 
 	prevInp, currInp, tempInp struct {

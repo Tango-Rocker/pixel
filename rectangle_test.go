@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/faiface/pixel"
+	"github.com/tango-rocker/pixel"
 )
 
 func TestRect_Resize(t *testing.T) {

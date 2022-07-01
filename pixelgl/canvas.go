@@ -6,9 +6,9 @@ import (
 
 	"github.com/faiface/glhf"
 	"github.com/faiface/mainthread"
-	"github.com/faiface/pixel"
 	"github.com/go-gl/mathgl/mgl32"
 	"github.com/pkg/errors"
+	"github.com/tango-rocker/pixel"
 )
 
 // Canvas is an off-screen rectangular BasicTarget and Picture at the same time, that you can draw
